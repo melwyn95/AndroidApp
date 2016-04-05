@@ -1,5 +1,7 @@
 package com.example.melwyn.loginapplication;
 
+import android.util.Log;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -17,7 +19,7 @@ public class TeamDataProvider {
         return teamData;
     }
 
-    static {
+    /*static {
         Team team = null;
         String jsonArray = "[{\"team_points\":100,\"team_id\":1,\"team_name\":\"india\"},{\"team_points\":200,\"team_id\":2,\"team_name\":\"england\"}]";
         try {
@@ -34,5 +36,23 @@ public class TeamDataProvider {
             e.printStackTrace();
         }
 
+    }*/
+
+    public static void setTeamData(JSONArray jsonArray) {
+        Team team = null;
+        for (int i=0;i<jsonArray.length();i++) {
+            JSONObject jsonObject = null;
+            try {
+                jsonObject = (JSONObject) jsonArray.get(i);
+                team = new Team();
+                team.setTeamId((Integer) jsonObject.get("team_id"));
+                team.setTeamName((String) jsonObject.get("team_name"));
+                team.setTeamPoints((Integer) jsonObject.get("team_points"));
+                teamData.add(team);
+                Log.d("TeamDta", (String) jsonObject.get("team_name"));
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
