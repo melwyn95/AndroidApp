@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.example.melwyn.loginapplication"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    useLibrary 'org.apache.http.legacy'
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+    compile ('com.android.support:appcompat-v7:23.2.1') {
+        exclude group: 'org.apache.httpcomponents', module: 'httpclient'
+    }
+    compile 'org.apache.httpcomponents:httpclient:4.2.3'
+    compile ('com.android.support:design:23.2.1') {
+        exclude group: 'org.apache.httpcomponents', module: 'httpclient'
+    }
+    compile ('com.android.support:multidex:1.0.0') {
+        exclude group: 'org.apache.httpcomponents', module: 'httpclient'
+    }
+    compile ('org.apache.httpcomponents:httpcore:4.4.3') {
+        exclude(group: 'org.apache.httpcomponents', module: 'httpclient')
+    }
+}
+
