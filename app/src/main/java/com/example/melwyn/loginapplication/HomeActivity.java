@@ -3,18 +3,12 @@ package com.example.melwyn.loginapplication;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
 
 import org.json.JSONArray;
 
@@ -29,26 +23,42 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+
         setContentView(R.layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+//        Log.d("HomeActivity", "Before execute");
+//
+//        TeamDetails td= new TeamDetails();
+//        td.execute();
+//
+//        Log.d("Home Activity", "Outside Async Task after execute() and before get");
+//
+//        teamData = teamDataProvider.getTeamData();
+//
+//        Log.d("Home Activity", "After Get");
+//
+//        ArrayAdapter arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, teamData);
+//
+//        ListView listView = (ListView) findViewById(android.R.id.list);
+//        listView.setAdapter(arrayAdapter);
+//
+//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                String teamName = (String) ((TextView) view).getText();
+//                Log.d("Team Name", teamName);
+//            }
+//        });
 
-        Log.d("HomeActivity", "Before execute");
+        //TeamDetails td= new TeamDetails();
 
-        TeamDetails td= new TeamDetails();
+        //td.execute();
 
-        td.execute();
-
-        teamData = teamDataProvider.getTeamData();
+        /*teamData = teamDataProvider.getTeamData();
 
         ArrayAdapter<Team> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, teamData);
 
@@ -61,7 +71,7 @@ public class HomeActivity extends AppCompatActivity {
                 String teamName = (String) ((TextView)view).getText();
                 Log.d("Team Name", teamName);
             }
-        });
+        });*/
 
     }
 
@@ -91,12 +101,10 @@ public class HomeActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    /*public void logoutClickHandler(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intent);
-        finish();
-    }*/
+    public void squadOnClickHandler(View view) {
+        new TeamDetails().execute();
+
+    }
 
     class TeamDetails extends AsyncTask<String, String, String> {
 
@@ -107,6 +115,13 @@ public class HomeActivity extends AppCompatActivity {
             JSONParser jsonParser  = new JSONParser();
             jsonArray = jsonParser.getJsonArray(url, "GET");
             teamDataProvider.setTeamData(jsonArray);
+            Log.d("Home Activity", "Inside Async Task got the teams from server");
+            Intent teamsData = new Intent(getApplicationContext(), TeamDetailsActivity.class);
+            Log.d("Home Activity", teamDataProvider.getTeamData().get(0).getTeamName());
+            teamsData.putExtra("teamData", teamDataProvider);
+            teamsData.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(teamsData);
+            finish();
             return null;
         }
     }

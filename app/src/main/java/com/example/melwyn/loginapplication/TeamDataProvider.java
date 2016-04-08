@@ -1,5 +1,7 @@
 package com.example.melwyn.loginapplication;
 
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.util.Log;
 
 import org.json.JSONArray;
@@ -12,10 +14,10 @@ import java.util.List;
 /**
  * Created by Melwyn on 05/04/2016.
  */
-public class TeamDataProvider {
-    private static List<Team> teamData = new ArrayList<>();
+public class TeamDataProvider implements Parcelable {
+    private  List<Team> teamData = new ArrayList<>();
 
-    public static List<Team> getTeamData() {
+    public  List<Team> getTeamData() {
         return teamData;
     }
 
@@ -38,7 +40,7 @@ public class TeamDataProvider {
 
     }*/
 
-    public static void setTeamData(JSONArray jsonArray) {
+    public  void setTeamData(JSONArray jsonArray) {
         Team team = null;
         for (int i=0;i<jsonArray.length();i++) {
             JSONObject jsonObject = null;
@@ -55,4 +57,33 @@ public class TeamDataProvider {
             }
         }
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeTypedList(teamData);
+    }
+
+    public TeamDataProvider() {
+    }
+
+    protected TeamDataProvider(Parcel in) {
+        this.teamData = in.createTypedArrayList(Team.CREATOR);
+    }
+
+    public static final Parcelable.Creator<TeamDataProvider> CREATOR = new Parcelable.Creator<TeamDataProvider>() {
+        @Override
+        public TeamDataProvider createFromParcel(Parcel source) {
+            return new TeamDataProvider(source);
+        }
+
+        @Override
+        public TeamDataProvider[] newArray(int size) {
+            return new TeamDataProvider[size];
+        }
+    };
 }

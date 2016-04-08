@@ -27,6 +27,33 @@
 
         </android.support.design.widget.AppBarLayout>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Squad"
+            android:id="@+id/button2"
+            android:layout_below="@+id/appBar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="79dp"
+            android:onClick="squadOnClickHandler"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/button4"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/button5"
+            android:layout_below="@+id/button4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="54dp" />
+
 
         <!--<Button
             android:id="@+id/button2"
@@ -48,13 +75,15 @@
             android:layout_gravity="bottom|end"
             android:src="@android:drawable/ic_dialog_email" />-->
 
-        <ListView
+        <!--ListView
             android:id="@android:id/list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/appBar" />
+            android:layout_below="@+id/appBar" /-->
+
+
 
 
     </RelativeLayout>
