@@ -48,23 +48,23 @@
 
 
     <Button
-        android:id="@+id/scorecard_btn"
+        android:id="@+id/scorecard_btn_team1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="IND"
         android:textIsSelectable="true"
-        android:onClick="viewScorecard"        
+        
         android:textColor="@color/blue"
         android:layout_alignTop="@+id/team_1_img"
         android:layout_alignEnd="@+id/total-runs" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/scorecard_btn_team2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="AUS"
         android:textIsSelectable="true"
-        android:onClick="viewScorecard"
+        android:onClick="viewScorecardTwo"
         android:textColor="@color/yellow"
         android:layout_alignBottom="@+id/scorecard_btn"
         android:layout_alignParentEnd="true" />
