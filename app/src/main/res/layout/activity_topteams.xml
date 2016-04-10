@@ -1,0 +1,358 @@
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_floating_material_light"
+    tools:context=".topteams"
+    android:id="@+id/topteamsmain">
+
+	<ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView2"
+         >
+		 
+	<RelativeLayout
+    
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	
+    android:id="@+id/topteams">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="TEAM RANKINGS"
+        android:id="@+id/topteams_title"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Rank"
+        android:id="@+id/topteams_rank"
+        android:layout_below="@+id/topteams_title"
+        android:layout_toStartOf="@+id/topteams_title" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Team"
+        android:id="@+id/topteams_team"
+        android:layout_alignTop="@+id/topteams_rank"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Points"
+        android:id="@+id/topteams_points"
+        android:layout_alignTop="@+id/topteams_team"
+        android:layout_toEndOf="@+id/topteams_title" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="1"
+        android:id="@+id/rank1"
+        android:layout_below="@+id/topteams_rank"
+        android:layout_alignStart="@+id/topteams_rank"
+        android:layout_marginTop="31dp" />
+		
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="2"
+        android:id="@+id/rank2"
+        android:layout_below="@+id/rank1"
+        android:layout_alignStart="@+id/rank1"
+        android:layout_marginTop="31dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="3"
+        android:id="@+id/rank3"
+        android:layout_below="@+id/rank2"
+        android:layout_alignStart="@+id/rank2"
+        android:layout_marginTop="31dp" />
+
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="4"
+		android:layout_below="@+id/rank3"
+        android:layout_alignStart="@+id/rank3"
+        android:layout_marginTop="31dp" 
+        android:id="@+id/rank4"
+    
+        />
+		
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="5"
+		android:layout_below="@+id/rank4"
+        android:layout_alignStart="@+id/rank4"
+        android:layout_marginTop="31dp" 
+        android:id="@+id/rank5"
+    
+        />
+		
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="6"
+		android:layout_below="@+id/rank5"
+        android:layout_alignStart="@+id/rank5"
+        android:layout_marginTop="31dp" 
+        android:id="@+id/rank6"
+    
+        />
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="7"
+		android:layout_below="@+id/rank6"
+        android:layout_alignStart="@+id/rank6"
+        android:layout_marginTop="31dp" 
+        android:id="@+id/rank7"
+    
+        />
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="8"
+		android:layout_below="@+id/rank7"
+        android:layout_alignStart="@+id/rank7"
+        android:layout_marginTop="31dp" 
+        android:id="@+id/rank8"
+    
+        />
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="9"
+		android:layout_below="@+id/rank8"
+        android:layout_alignStart="@+id/rank8"
+        android:layout_marginTop="31dp" 
+        android:id="@+id/rank9"
+    
+        />
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="10"
+		android:layout_below="@+id/rank9"
+        android:layout_alignStart="@+id/rank9"
+        android:layout_marginTop="31dp" 
+        android:id="@+id/rank10"
+    
+		
+        />
+	
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="india"
+        android:id="@+id/team1"
+        android:layout_above="@+id/rank2"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="australia"
+        android:id="@+id/team2"
+        android:layout_alignTop="@+id/rank2"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="new zealand"
+        android:id="@+id/team3"
+        android:layout_alignTop="@+id/rank3"
+        android:layout_centerHorizontal="true" />
+	
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="england"
+        android:id="@+id/team4"
+        android:layout_alignTop="@+id/rank4"
+        android:layout_centerHorizontal="true" />
+		
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="west indies"
+        android:id="@+id/team5"
+        android:layout_alignTop="@+id/rank5"
+        android:layout_centerHorizontal="true" />	
+	
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="south africa"
+        android:id="@+id/team6"
+        android:layout_alignTop="@+id/rank6"
+        android:layout_centerHorizontal="true" />
+	
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="sri lanka"
+        android:id="@+id/team7"
+        android:layout_alignTop="@+id/rank7"
+        android:layout_centerHorizontal="true" />
+		
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="pakistan"
+        android:id="@+id/team8"
+        android:layout_alignTop="@+id/rank8"
+        android:layout_centerHorizontal="true" />
+	
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="bangladesh"
+        android:id="@+id/team9"
+        android:layout_alignTop="@+id/rank9"
+        android:layout_centerHorizontal="true" />
+	
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="afghanistan"
+        android:id="@+id/team10"
+        android:layout_alignTop="@+id/rank10"
+        android:layout_centerHorizontal="true" />
+		
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="200"
+        android:id="@+id/points1"
+        android:layout_above="@+id/rank2"
+        android:layout_alignEnd="@+id/topteams_points" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="186"
+        android:id="@+id/points2"
+        android:layout_alignTop="@+id/team2"
+        android:layout_alignStart="@+id/points1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="165"
+        android:id="@+id/points3"
+        android:layout_alignTop="@+id/team3"
+        android:layout_alignStart="@+id/points2" />
+	
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="165"
+        android:id="@+id/points4"
+        android:layout_alignTop="@+id/team4"
+        android:layout_alignStart="@+id/points3" />
+		
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="165"
+        android:id="@+id/points5"
+        android:layout_alignTop="@+id/team5"
+        android:layout_alignStart="@+id/points4" />
+		
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="165"
+        android:id="@+id/points6"
+        android:layout_alignTop="@+id/team6"
+        android:layout_alignStart="@+id/points5" />
+
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="165"
+        android:id="@+id/points7"
+        android:layout_alignTop="@+id/team7"
+        android:layout_alignStart="@+id/points6" />
+		
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="165"
+        android:id="@+id/points8"
+        android:layout_alignTop="@+id/team8"
+        android:layout_alignStart="@+id/points7" />	
+	
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="165"
+        android:id="@+id/points9"
+        android:layout_alignTop="@+id/team9"
+        android:layout_alignStart="@+id/points8" />
+	
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="165"
+        android:id="@+id/points10"
+        android:layout_alignTop="@+id/team10"
+        android:layout_alignStart="@+id/points9" />
+	
+
+    </RelativeLayout>
+    
+	</ScrollView>
+
+
+</RelativeLayout>
