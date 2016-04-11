@@ -29,50 +29,6 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-//        Log.d("HomeActivity", "Before execute");
-//
-//        TeamDetails td= new TeamDetails();
-//        td.execute();
-//
-//        Log.d("Home Activity", "Outside Async Task after execute() and before get");
-//
-//        teamData = teamDataProvider.getTeamData();
-//
-//        Log.d("Home Activity", "After Get");
-//
-//        ArrayAdapter arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, teamData);
-//
-//        ListView listView = (ListView) findViewById(android.R.id.list);
-//        listView.setAdapter(arrayAdapter);
-//
-//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                String teamName = (String) ((TextView) view).getText();
-//                Log.d("Team Name", teamName);
-//            }
-//        });
-
-        //TeamDetails td= new TeamDetails();
-
-        //td.execute();
-
-        /*teamData = teamDataProvider.getTeamData();
-
-        ArrayAdapter<Team> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, teamData);
-
-        ListView listView = (ListView) findViewById(android.R.id.list);
-        listView.setAdapter(arrayAdapter);
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String teamName = (String) ((TextView)view).getText();
-                Log.d("Team Name", teamName);
-            }
-        });*/
-
     }
 
     @Override

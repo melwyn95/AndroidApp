@@ -47,22 +47,10 @@ public class GridViewActivity extends AppCompatActivity {
                 String[] playerName =playerList.get(position).getPlayerName().split(" ");
                 imageName = playerName[0]+"_"+playerName[1];
                 if (playerList.get(position).getPlayerSkill() == 1) {
-                    //Batsman b = new Batsman();
                     String url = "http://jbossews-melwyn95.rhcloud.com/DetailsServlet?skillId=1&playerId="+playerList.get(position).getPlayerId();
-                    /*JSONParser jsonParser = new JSONParser();
-                    JSONArray jsonArray = jsonParser.getJsonArray(url, "GET");
-                    try {
-                        b.setBatsman((JSONObject) jsonArray.get(0));
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    i.putExtra("batsman", b);
-                    i.putExtra("playerName", playerList.get(position).getPlayerName());
-                    startActivity(i);*/
                     new GetBatsman(url, playerList.get(position).getPlayerName(), imageName).execute();
                 } else {
                     String url = "http://jbossews-melwyn95.rhcloud.com/DetailsServlet?skillId=2&playerId="+playerList.get(position).getPlayerId();
-
                     new GetBowler(url, playerList.get(position).getPlayerName(), imageName).execute();
                 }
 
@@ -124,6 +112,7 @@ public class GridViewActivity extends AppCompatActivity {
             i.putExtra("imageName", imageName);
             i.putExtra("playerType", "Batsman");
             startActivity(i);
+            finish();
             return null;
         }
     }
@@ -156,6 +145,7 @@ public class GridViewActivity extends AppCompatActivity {
             i.putExtra("imageName", imageName);
             i.putExtra("playerType", "Bowler");
             startActivity(i);
+            finish();
             return null;
         }
     }
