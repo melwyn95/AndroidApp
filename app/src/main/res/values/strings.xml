@@ -3,4 +3,6 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="title_activity_team_details_activity">team_details_activity</string>
+    <string name="title_activity_grid_view">GridViewActivity</string>
+    <string name="title_activity_player_details">PlayerDetails</string>
 </resources>
