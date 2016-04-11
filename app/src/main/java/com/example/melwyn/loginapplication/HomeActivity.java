@@ -61,6 +61,13 @@ public class HomeActivity extends AppCompatActivity {
         new TeamDetails().execute();
 
     }
+    
+    public void viewNewsfeed(View view) {
+        
+        Intent intent= new Intent(this, NewsFeedActivity.class); 
+        startActivity(intent);
+
+    }
 
     class TeamDetails extends AsyncTask<String, String, String> {
 
