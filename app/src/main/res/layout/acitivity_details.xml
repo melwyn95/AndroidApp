@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+	<ScrollView
+	android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:id="@+id/detail_scrollview"
+	
+	>
+	
+	
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	>
+	
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="130dp"
+        android:id="@+id/detail_img"
+		android:src="@drawable/rohit"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Name : Rohit Sharma"
+        android:id="@+id/detail_name"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/detail_img" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Team : India"
+        android:id="@+id/detail_team"
+        android:layout_above="@+id/detail_skill"
+        android:layout_toEndOf="@+id/detail_img" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Skill : Batsman"
+        android:id="@+id/detail_skill"
+        android:layout_alignBottom="@+id/detail_img"
+        android:layout_toEndOf="@+id/detail_img"
+		android:layout_marginTop="25dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="MATCHES"
+        android:id="@+id/detail_matches"
+        android:layout_below="@+id/detail_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="47dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="20"
+        android:id="@+id/detail_matches_val"
+        android:layout_below="@+id/detail_matches"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="RUNS"
+        android:id="@+id/detail_runs"
+        android:layout_below="@+id/detail_matches_val"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="200"
+        android:id="@+id/detail_runs_val"
+        android:layout_below="@+id/detail_runs"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="AVERAGE"
+        android:id="@+id/detail_average"
+        android:layout_below="@+id/detail_runs_val"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="200"
+        android:id="@+id/detail_average_val"
+        android:layout_below="@+id/detail_average"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="BEST"
+        android:id="@+id/detail_best"
+        android:layout_below="@+id/detail_average_val"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="200"
+        android:id="@+id/detail_best_val"
+        android:layout_below="@+id/detail_best"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="STRIKE RATE"
+        android:id="@+id/detail_sr"
+        android:layout_below="@+id/detail_best_val"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="200"
+        android:id="@+id/detail_sr_val"
+        android:layout_below="@+id/detail_sr"
+        android:layout_centerHorizontal="true" />
+	
+	</RelativeLayout>
+	</ScrollView>
+</RelativeLayout>
